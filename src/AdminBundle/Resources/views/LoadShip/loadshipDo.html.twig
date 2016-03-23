@@ -1,0 +1,14 @@
+{% extends 'AdminBundle::baseadmin.html.twig' %}
+
+{% block body %}
+
+	<p style="color: green; font-weight:900;" >{{success}}</p> 
+	
+	{% for message in messages %}
+		<p style="background:#fee;">{{message}}</p>
+	{% endfor %}
+
+
+	
+	
+{% endblock %}

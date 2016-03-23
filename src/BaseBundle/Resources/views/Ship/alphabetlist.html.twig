@@ -1,0 +1,12 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Теплоходы по алфавиту{% endblock %}
+
+{% block body %}
+<h1>Теплоходы по алфавиту</h1>
+<br>
+				{% for ship in ships %}				
+					{% include 'BaseBundle:Ship:tableShip.html.twig' %}
+				{% endfor %}
+
+{% endblock %}

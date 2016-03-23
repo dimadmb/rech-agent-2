@@ -1,0 +1,32 @@
+{% extends 'AdminBundle::baseadmin.html.twig' %}
+
+
+{% block body %}
+
+
+
+<style>
+table.cr tr td {
+	padding:5px;
+	border:1px solid #ccc;
+}
+</style>
+<table class="cr">
+	{% for id,cruise in cruises %}	
+	<tr>
+		<td>{{id}}</td>
+		<td>{{cruise.motorship}}</td>
+		<td>{{cruise.name}}</td>
+		<td>{{cruise.days}}</td>
+		<td>{{cruise.date_start}}</td>
+		<td>{{cruise.date_stop}}</td>
+		<td>{{cruise.availability_count}}</td>
+		<td>{% for d in cruise.directions %} {{d}}<br> {% endfor %}</td>
+		
+	</tr>	
+	{% endfor %}
+</table>	
+	
+
+	
+{% endblock %}

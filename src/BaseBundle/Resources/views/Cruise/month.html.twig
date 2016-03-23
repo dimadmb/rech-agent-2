@@ -1,0 +1,11 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Расписание речных круизов на {{title}}{% endblock %}
+
+{% block body %}
+<h1>Расписание речных круизов на {{title}}</h1>
+<br>
+
+{% include 'BaseBundle:Cruise:table_cruises.html.twig'   %}
+
+{% endblock %}				

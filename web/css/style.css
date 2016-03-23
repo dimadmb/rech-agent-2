@@ -1,0 +1,300 @@
+
+
+html {
+	position: relative;
+	min-height: 100%;
+}
+body {
+	/* Отступ снизу, по высоте футера */
+	margin-bottom: 120px !important;
+}
+
+/* FOOTER */
+
+hr {
+	border-top: 2px solid #483381;
+}
+
+
+.footer {
+	background:#483381;
+	padding:20px 0 0 ;
+	color:#fff;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Фиксированная высота футера */
+	height: 120px;
+}
+.footer .container .row {
+	background:#483381;
+	padding: 0 0 10px;
+}
+.footer a {
+	color:#fff;
+}
+
+/* END FOOTER */
+
+
+
+.img-portfolio {
+	margin-bottom:30px;
+}
+
+.navbar {
+	margin-bottom:0px !important;
+}
+
+
+
+
+.navbar-brand.center {
+	left:50%;
+
+	margin-left:-100px;
+	position:absolute;
+}
+
+.navbar-brand.navbar-right{
+
+}
+
+h1,h2,h3,h4,h5,h6 {
+	color:#483381;
+}
+
+h1 {
+	font-size: 30px !important;
+}
+h2 {
+	font-size: 24px !important;
+}
+h3{
+	font-size: 20px !important;
+	/*font-weight:900 ;*/
+}
+h4 {
+	font-size: 16px !important;
+	font-weight:700;
+}
+h5{
+	font-size: 14px !important;
+}
+
+.navbar-inverse {
+  background-image: -webkit-linear-gradient(top, #463180 0%, #4D3884 100%);
+  background-image:      -o-linear-gradient(top, #463180 0%, #4D3884 100%);
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#463180), to(#4D3884));
+  background-image:         linear-gradient(to bottom, #463180 0%, #4D3884 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#463180', endColorstr='#4D3884', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
+}
+
+.navbar .container.header-volna {
+	background:url(../images/template/head.png) no-repeat;
+	
+	-moz-background-size: 100% 100px; 
+    -webkit-background-size: 100% 100px; 
+    -o-background-size: 100% 100px; 
+    background-size: 100% 100px; 
+	
+}
+
+
+.navbar-inverse .navbar-brand {
+  color: #fff;
+
+}
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus {
+  color: #ccc;
+  background-color: transparent;
+}
+
+.navbar-inverse .navbar-nav > li > a {
+  color: #fff;
+}
+
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus {
+  color: #ccc;
+  background-color: transparent;
+  background-image: none;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .open > a:hover,
+.navbar-inverse .navbar-nav > .open > a:focus {
+    color: #fff;
+    background-color: #483381;
+    background-image: none;
+}
+
+.navbar-inverse .navbar-nav > .open > a,
+.navbar-inverse .navbar-nav > .active > a {
+
+}
+
+.navbar-nav{
+	background: -webkit-linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0) 100%);
+	background: -o-linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0) 100%);
+	background: -webkit-gradient(to right, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0) 100%);
+	background: linear-gradient(to right, rgba(0,0,0,0) 0%, rgba(255,255,255,0.3) 50%, rgba(0,0,0,0) 100%);
+}
+
+.nav > li > a {
+    position: relative;
+    display: block;
+    padding: 10px 10px;
+}
+
+.dropdown-submenu {
+  position: relative;
+}
+
+.dropdown-submenu>.dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+
+}
+
+.dropdown-submenu:hover>.dropdown-menu {
+  display: block;
+}
+
+.dropdown-submenu>a:after {
+  display: block;
+  content: " ";
+  float: right;
+  width: 0;
+  height: 0;
+  border-color: transparent;
+  border-style: solid;
+  border-width: 5px 0 5px 5px;
+  border-left-color: #ccc;
+  margin-top: 5px;
+  margin-right: -10px;
+}
+
+.dropdown-submenu:hover>a:after {
+  border-left-color: #fff;
+}
+
+.dropdown-submenu.pull-left {
+  float: none;
+}
+
+.dropdown-submenu.pull-left>.dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+}
+
+
+.carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    margin: 0 auto;
+}
+
+
+.specpredlozeniya {
+	padding:20px 0 0 0;
+}
+.specpredlozeniya img {
+	margin:0 auto;
+}
+
+
+
+
+.carousel-control.left {
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .0001) 100%);
+  background-image:      -o-linear-gradient(left, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .0001) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, .5)), to(rgba(255, 255, 255, .0001)));
+  background-image:         linear-gradient(to right, rgba(255, 255, 255, .5) 0%, rgba(255, 255, 255, .0001) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80ffffff', endColorstr='#00ffffff', GradientType=1);
+  background-repeat: repeat-x;
+}
+.carousel-control.right {
+  right: 0;
+  left: auto;
+  background-image: -webkit-linear-gradient(left, rgba(255, 255, 255, .0001) 0%, rgba(255, 255, 255, .5) 100%);
+  background-image:      -o-linear-gradient(left, rgba(255, 255, 255, .0001) 0%, rgba(255, 255, 255, .5) 100%);
+  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, .0001)), to(rgba(255, 255, 255, .5)));
+  background-image:         linear-gradient(to right, rgba(255, 255, 255, .0001) 0%, rgba(255, 255, 255, .5) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#80ffffff', GradientType=1);
+  background-repeat: repeat-x;
+}
+
+.container-search {
+	background:#DCDDDF;
+}
+.container-search a[href="#spoiler-1"] {
+	width:100%;
+}
+.container-search div.slider-horizontal {
+	width:100%;
+}
+@media (max-width: 767px){
+	.container-search div.slider-horizontal  .tooltip.tooltip-main.top {
+		opacity:1;
+	}
+}
+.container-search button[type="submit"] {
+	width:100%;
+	margin:20px auto;
+	/*height:40px;*/
+}
+
+
+#form_places:after {
+    visibility: hidden;
+    display: block;
+    font-size: 0;
+    content: " ";
+    clear: both;
+    height: 0;	
+}
+
+#form_places div.checkbox {
+	width:33%;
+	float:left;
+	margin-top:-5px;
+}
+
+@media (max-width: 767px){
+#form_places div.checkbox {
+    width: 50%;
+}	
+	
+}
+
+.table-special-span {
+	padding: 3px 5px;
+    border-radius: 5px;
+	margin:3px;	
+	display: block;
+	white-space: nowrap;
+	text-align:center;
+	color:#fff;
+
+}
+
+.color-gk {
+	background:#F5A3C3;
+}
+.color-sc {
+	background:#FFD370;
+}
+.color-st {
+	background:#72B3E2;
+}
+ 
+.table-striped > tbody > tr:nth-of-type(odd) {
+  background-color: #E6E6E6;
+}
+
+.table-cruises th {
+	background:#483D9B;
+	color:#E4E7FA;
+}

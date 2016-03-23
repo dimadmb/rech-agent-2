@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+
+{% block title %}Теплоходы по комфортабельности{% endblock %}
+
+{% block body %}
+<h1>Теплоходы по комфортабельности</h1>
+
+
+			{% for class in classes %}
+				<div class="clearfix">
+				<h3>{{class.title}}</h3>
+				<hr style="border-top: 1px solid #483381;">
+
+				{% for ship in class.ships %}				
+					{% include 'BaseBundle:Ship:tableShip.html.twig' %}
+				{% endfor %}
+			</div>
+			{% endfor %}			
+
+
+
+
+{% endblock %}

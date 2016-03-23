@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{document.title}}{% endblock %}
+
+{% block body %}
+ 
+<h1>{{ document.contentTitle }}</h1> 
+
+	
+	{{ document.body| raw }}
+	
+	{{ render(controller('BaseBundle:Photo:getPhotos',{doc_id : document.id, path:document.url }))  }}
+	
+{% endblock %}
+

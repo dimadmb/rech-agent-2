@@ -1,0 +1,10 @@
+{% extends 'AdminBundle::baseadmin.html.twig' %}
+
+{% block body %}
+	<form action="{{ path('loadshipdo') }}" method="post" {{ form_enctype(form_excel) }} >
+	{{ form_rest(form_excel) }}
+	</form>
+	
+	
+	
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{category.title}}{% endblock %}
+
+{% block body %}
+
+<h1>{{category.title}}</h1>
+
+	{% for document in documents %}
+		<a href="{{path('homepage')}}{{document.url | trim('/')}}.html">{{ document.contentTitle }}</a><br>
+	{% endfor %}
+
+{% endblock %}

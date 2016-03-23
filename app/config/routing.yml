@@ -1,0 +1,86 @@
+#admin:
+#   resource: '@SonataAdminBundle/Resources/config/routing/sonata_admin.xml'
+#   prefix: /admin
+#
+#_sonata_admin:
+#   resource: .
+#   type: sonata_admin
+#   prefix: /admin
+#
+
+base:
+    resource: "@BaseBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+admin:
+    resource: "@AdminBundle/Controller/"
+    type:     annotation
+    prefix:   /
+
+cruiseorder:
+    path: "/cruise/order.html"
+    defaults: { _controller: BaseBundle:Order:index }
+
+cruiseorder_code:
+    path: "/cruise/order/{code}"
+    defaults: { _controller: BaseBundle:Order:index }
+
+homepage:
+    path: "/"
+    defaults: { _controller: BaseBundle:Document:index }
+
+specialoffer:
+    path: "/specialoffer/{offer}.html"
+    defaults: { _controller: BaseBundle:Cruise:specialoffer }
+
+cruisedetails:
+    path: "/cruise/cruisedetails/{url}.html"
+    defaults: { _controller: BaseBundle:Cruise:details }	
+
+monthschedule:
+    path: "/cruise/monthschedule"
+    defaults: { _controller: BaseBundle:Cruise:schedule }
+
+cruiseroutes:
+    path: "/cruise/routes.html"
+    defaults: { _controller: BaseBundle:Document:routes }
+
+categoryroutes:
+    path: "/cruise/categoryroutes/{category}.html"
+    defaults: { _controller: BaseBundle:Cruise:categoryroutes }
+
+month_cruises:
+    path: "/cruise/month/{month}.html"
+    defaults: { _controller: BaseBundle:Cruise:month }
+
+ship:
+    path: "/cruise/ship/{ship}.html"
+    defaults: { _controller: BaseBundle:Cruise:ship }
+
+page:
+    path: "/{first}/{second}/{name}.html"
+    defaults: { _controller: BaseBundle:Document:page }
+
+search:
+    path: "/search"
+    defaults: { _controller:BaseBundle:Cruise:search }
+
+page_small:
+    path: "/{first}.html"
+    defaults: { _controller: BaseBundle:Document:page }		
+
+classlist:
+    path: "/cruise/classlist"
+    defaults: { _controller: BaseBundle:Ship:classlist }
+
+alphabetlist:
+    path: "/cruise/alphabetlist"
+    defaults: { _controller: BaseBundle:Ship:alphabetlist }
+
+showDocuments:
+    path: "/{first}/{second}/"
+    defaults: { _controller: BaseBundle:DocumentCategory:documents }	
+
+
+

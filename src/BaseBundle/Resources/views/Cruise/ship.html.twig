@@ -1,0 +1,24 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}{{document.title}}{% endblock %}
+
+{% block body %}
+ 
+
+ 
+<h1>{{ document.contentTitle }}</h1> 
+
+	{{ document.body| raw }}
+
+	{% if cruises_months %}
+	<br>
+	<h3>Расписание круизов теплохода «{{ ship.title }}»</h3>
+	<hr>
+		{% for cruises_month in cruises_months %}
+			<h3>{{cruises_month.name}}</h3>
+			{% include 'BaseBundle:Cruise:table_cruises.html.twig'  with {'cruises':cruises_month.row} %}
+		{% endfor %}
+	{% endif %}
+	{{ render(controller('BaseBundle:Photo:getPhotos',{doc_id : document.id, path:document.url }))  }}
+		
+{% endblock %}

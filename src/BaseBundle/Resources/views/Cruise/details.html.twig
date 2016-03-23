@@ -1,0 +1,67 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Описание речного круиза {{cruise.route}}{% endblock %}
+
+{% block body %}
+<h1>Описание речного круиза  {{cruise.route}}</h1>
+
+
+<p>
+Дата отправления:{{cruise.startdate | date("d.m.Y")}}<br>
+Дата прибытия:{{cruise.enddate | date("d.m.Y")}}<br>
+Длительность круиза (дней): {{cruise.daycount}}<br>
+Теплоход: <a href="{{path('page',{'first':'cruise','second':'ship','name':cruise.ship.code})}}">{{cruise.ship.title}}</a><br>
+Маршрут: {{cruise.route}} 
+</p>
+
+<h3>Программа круиза</h3>
+
+<table class="table  table-hover">
+	<tr>
+		<th>Дата</th>
+		<th>Стоянка	</th>
+		<th>Программа дня</th>
+	</tr>
+{% for item in cruise.programItems %}
+
+{#{dump(item)}#}	
+
+	<tr>
+		<td>{{item.date | date("d.m.Y")}}</td>
+		<td>
+		{% if (item.place != null) and (item.place.url != '')  %}
+			<a href="{{path('page',{'first':'cruise','second':'settlement','name':item.place.url})}}">{{item.place.title}}</a>
+		{% else %}
+			{{item.placetitle}}
+		{% endif %}	
+		</td>
+		<td>{{item.description}}</td>
+	</tr>
+	
+
+	
+{% endfor %}	
+</table>
+
+
+<h3>Стоимость тура на 1 человека *</h3>
+
+<table class="table  table-hover">
+	<tr>
+		<th>Каюта</th>
+		<th>Описание каюты	</th>
+		<th>Стоимость</th>
+	</tr>
+{% for item in cruise.prices %}
+	<tr>
+		<td>{{item.cabin.title}}</td>
+		<td>{{item.cabin.description}}</td>
+		<td>{{item.price}}</td>
+	</tr>
+{% endfor %}	
+</table>
+
+<p>* Цены действительны на момент публикации и могут незначительно измениться до полной оплаты рейса.</p>
+
+
+{% endblock %}

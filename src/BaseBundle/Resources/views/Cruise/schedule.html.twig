@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Расписание по месяцам{% endblock %}
+
+{% block body %}
+<h1>Расписание по месяцам</h1>
+<br>
+
+
+{% for cruises_month in cruises_months %}
+	<h3>{{cruises_month.name}}</h3>
+
+	
+
+{% include 'BaseBundle:Cruise:table_cruises.html.twig'  with {'cruises':cruises_month.row} %}
+	
+	
+{% endfor %}
+
+
+
+{% endblock %}

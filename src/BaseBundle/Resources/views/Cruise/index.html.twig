@@ -1,0 +1,15 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Речные круизы{% endblock %}
+
+{% block body %}
+<h1>Речные круизы</h1>
+<br>
+
+				{% for month in months %}	
+
+					<a href="{{month.url}}">{{month.title}}</a><br>
+					
+				{% endfor %}
+
+{% endblock %}				

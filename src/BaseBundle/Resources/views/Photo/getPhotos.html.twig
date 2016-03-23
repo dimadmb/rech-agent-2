@@ -1,0 +1,20 @@
+{% if photos %}
+
+
+	<div class="row">
+	
+		<div class="col-sm-12">
+			<h3>Фотоальбом </h3>
+			<hr>
+		</div>
+	
+		{% for photo in photos %}
+			<div class="col-sm-3 col-lg-2">
+				<a href="{{photo.url}}" rel="group" title="{{photo.title}}" class="photo">
+					<img src="{{photo.preview}}" alt="{{photo.title}}" class="img-responsive" style="margin:0 auto 10px;">
+				</a>		
+			</div>
+		{% endfor %}	
+	</div>
+
+{% endif %}

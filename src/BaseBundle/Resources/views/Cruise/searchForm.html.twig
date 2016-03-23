@@ -1,0 +1,82 @@
+
+<h3>Поиск круиза</h3>
+<form action="{{ path('search') }}" method="post" {{ form_enctype(form_search) }} >
+
+<div class="row">
+	<div class="col-sm-3">
+		{{ form_label(form_search.startDate, 'Дата отправления от') }}
+		{{ form_errors(form_search.startDate) }}
+		{{ form_widget(form_search.startDate) }}
+	</div>		
+	<div class="col-sm-3">
+		{{ form_label(form_search.endDate, 'Дата прибытия по') }}
+		{{ form_errors(form_search.endDate) }}
+		{{ form_widget(form_search.endDate) }}
+	</div>			
+	<div class="col-sm-3">
+		{{ form_label(form_search.ship, 'Теплоход') }}
+		{{ form_errors(form_search.ship) }}
+		{{ form_widget(form_search.ship) }}
+	</div>				
+	<div class="col-sm-3">
+		
+
+		
+	</div>
+</div>
+<div class="row">
+
+	<div class="col-sm-9">
+		<div class="row">
+			
+			<div class="col-sm-4">
+				{{ form_widget(form_search.burningCruise) }}			
+				{{ form_widget(form_search.reductionPrice) }}			
+				{{ form_widget(form_search.specialoffer) }}			
+			</div>		
+	
+			<div class="col-sm-4" style="padding:20px 15px 0 15px">
+			
+				{{ form_label(form_search.days, 'Продолжительность') }}
+				{{ form_errors(form_search.days) }}
+				{{ form_widget(form_search.days) }}		 
+			</div>
+			
+			<div class="col-sm-4" style="padding:20px 15px 0 15px">
+			
+			<a href="#spoiler-1" class="btn btn-default spoiler collapsed" data-toggle="collapse" aria-expanded="false">Города на маршруте</a>	
+			</div>			
+			
+			
+			<div class="col-sm-12">
+				<div class="collapse" id="spoiler-1" aria-expanded="false" style="height: 0px;">
+					<div class="well">
+						{#{ form_label(form_search.places, '') }#}
+						{{ form_errors(form_search.places) }}
+						{{ form_widget(form_search.places) }}			
+					</div>
+				</div>	
+			</div>		
+			
+			
+		</div>	
+	</div>	
+	
+	<div class="col-sm-3" style="padding:0px 15px  0 30px;">
+		{{ form_widget(form_search.button) }}	
+		
+		{{ form_rest(form_search) }}
+
+	</div>	
+
+
+	
+
+</div>
+
+
+
+
+	
+</form>
+

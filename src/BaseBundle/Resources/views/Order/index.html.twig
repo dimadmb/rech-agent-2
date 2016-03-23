@@ -1,0 +1,27 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Бронирование и оплата речного круиза, внесение депозита{% endblock %}
+
+{% block body %}
+<h1>Бронирование и оплата речного круиза, внесение депозита</h1>
+<br>
+
+{{page.body| raw}}
+
+
+{% if (cruise != null) %}
+<br>	теплоход <b>{{ cruise.ship }}</b>   маршрут <b>{{cruise.route}}</b> с <b>{{cruise.startdate | date("d.m.Y")}}</b> по <b>{{cruise.enddate | date("d.m.Y")}}</b><br><br>
+{% endif %}
+
+<div class="row">
+	<div class="col-sm-6">
+			<form action="{{ path('cruiseorder') }}" method="post" {{ form_enctype(form) }} >
+
+			{{ form_rest(form) }}
+
+			</form>	
+	</div>
+</div>
+
+
+{% endblock %}	
